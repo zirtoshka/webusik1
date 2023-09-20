@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/index.css">
+    <title>puk 1993</title>
+</head>
+
+<body>
+    <div>
+        <video style="display: none;" id="krosh-video" src="assets/krosh.mp4" controls="true"
+            crossorigin="anonymous"></video>
+        <video style="display: none;" id="pin-video" src="assets/pin.mp4" controls="true"
+            crossorigin="anonymous"></video>
+        <canvas id="tmp" style="display: none;" width="640"></canvas>
+        <canvas id="kill" class="overlay" width="640"></canvas>
+
+
+    </div>
+    <header class="header">
+        <h1> Зайцева Ирина Сергеевна P3209 1993</h1>
+        <!-- <h1> Zaitseva Irina Sergeevna P3209 1993</h1> -->
+    </header>
+    <br>
+    <div class="grid-container">
+    <div>
+        <form id="user-request">
+            <h1>Data input</h1>
+            <div class="x-input">
+                <label id="x-label">X:</label>
+                <select id="x-value" >
+                    <!-- autocomplete="on" -->
+                    <option value="-5" >-5</option>
+                    <option  value="-4">-4</option>
+                    <option value="-3">-3</option>
+                    <option  value="-2">-2</option>
+                    <option value="-1">-1</option>
+                    <option  value="0">0</option>
+                    <option  value="1">1</option>
+                    <option  value="2">2</option>
+                    <option  value="3">3</option>
+
+                </select>
+            </div>
+            <br>
+            <div class="y-input">
+                <label id="y-label">Y: </label>
+                <input id="y-value" name="y" type="text" required title="Y must be in range (-5, 5)" maxlength="10">
+            </div>
+            <br>
+            <div class="r-input">
+                <label id="r-label">R:</label>
+                <input name="radio" id="r-value" type="radio" value="1" checked>
+                <label for="r1">1</label>
+                <input name="radio" id="r-value" type="radio" value="1.5">
+                <label for="r2">1.5</label>
+
+                <input name="radio" id="r-value" type="radio" value="2">
+                <label for="r3">2</label>
+
+                <input name="radio" id="r-value" type="radio" value="2.5">
+                <label for="r4">2.5</label>
+
+                <input name="radio" id="r-value" type="radio" value="3">
+                <label for="r5">3</label>
+
+
+
+            </div>
+
+            <br>
+            <div class="botton">
+                <input type="submit" id="submit-button" value="want to check">
+            </div>
+
+        </form>
+
+        <br>
+
+    <div class="disable-botton">
+        <label for="disable-video">disable video</label>
+        <input id="disable-video" type="checkbox" value=" ">
+    </div>
+    </div>
+
+        <div class="img">
+            <h1>Graph</h1>
+            <img src="assets/img.png" alt="img" width="400">
+        </div>
+
+
+        <div class="result">
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th width="5%">X</th>
+                        <th width="5%">Y</th>
+                        <th width="5%">R</th>
+                        <th width="40%">Current time</th>
+                        <th width="25%">Script time (ms)</th>
+                        <th width="20%">Result</th>
+                    </tr>
+                </thead>
+                <tbody id="results-content">
+                </tbody>
+            </table>
+        </div>
+<!-- 
+    <div class="disable-botton">
+    <label for="disable-video">disable video</label>
+    <input id="disable-video" type="checkbox" value=" ">
+    </div> -->
+    </div>
+
+    <div id="custom-toast" class="toast">
+        <div class="toast-content">
+          <!-- Здесь вы можете разместить текст уведомления -->
+          Пример уведомления
+        </div>
+      </div>
+
+    <script src="js/animations.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+
+</body>
+
+</html>
