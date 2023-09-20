@@ -50,7 +50,6 @@ function isCorrect(float $n): void
 {
     $nStr=strval($n);
     $nDots= strpos($nStr, '.');
-
     if ($nDots !== false) {
         if(strlen($nStr) - $nDots - 1 >= 10 ){
             interrupt(400,"to many numbers");
