@@ -1,0 +1,159 @@
+body {
+  background: linear-gradient(30deg, #91f08e, #b3fdda, #afe9f4, #d0ffcc);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@font-face {
+  font-family: 'murk';
+  src: url('fantasia-plain.woff2') format('woff2'),
+    url('fantasia-plain.woff') format('woff'),
+    url('fantasia-plain.eot') format('eot'),
+    url('fantasia-plain.otf') format('otf'),
+    url('fantasia-plain.svg') format('svg'),
+    url('fantasia-plain.ttf') format('ttf');
+}
+
+.header {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  color: rgb(7, 7, 6);
+  font-family: 'murk', fantasy, Arial, sans-serif;
+  font-size: 20px;
+}
+
+.x-input *,
+.y-input *,
+.r-input * {
+  width: 15%;
+  height: 15%;
+  font-size: 150%;
+}
+
+.botton * {
+  width: 30%;
+  height: 15%;
+  font-size: 100%;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 15px;
+  transform: scale(1.5);
+
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  pointer-events: none;
+
+}
+
+.grid-container {
+  display: grid;
+  display: -webkit-grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (min-width: 901px) and (max-width: 1300px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    /* Две колонки при узком экране */
+  }
+
+  .grid-container .result {
+    margin-right: auto;
+    margin-left: auto;
+    grid-column: 1 / span 2;
+    /* Занимает две колонки */
+    text-align: center;
+    /* Выравнивание по центру */
+  }
+
+}
+
+
+th,
+td {
+  text-align: center;
+}
+
+tbody tr:hover {
+  transform: scale(1.01);
+  background-color: #72f4a6a7;
+}
+
+/* 
+.disable-botton {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+} */
+
+
+
+.toast {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0008ff;
+  color: #f8f8f8;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.toast.show {
+  display: block;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
