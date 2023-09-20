@@ -40,9 +40,10 @@ $data = data_from_json([
     "x" => "is_numeric",
     "y" => "is_numeric",
     "r" => "is_numeric"
-]); 
+]);
 
 $x =  $data["x"];
+//?dsd
 $y =  $data["y"];
 $r =  $data["r"];
 
