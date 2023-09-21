@@ -22,7 +22,7 @@ class AnimationProcessor {
 		// this.kill.style.left = 1000 + 'px';
 		// this.kill.style.top = 380 + 'px';
 		this.kill.style.left = iw + 'px';
-		this.kill.style.top = ih/2+30 + 'px';
+		this.kill.style.top = ih/2+200 + 'px';
 
 
 	}
